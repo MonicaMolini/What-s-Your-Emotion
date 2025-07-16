@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Indovina l'emozione</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img src="./img/logo.webp" alt="logo" />
+    <h1>What is your emotion?</h1>
+    <div class="container" id="container">
+      <h2 id="welcome-name">
+        Ciao! <br />
+        Dicci il tuo nome
+      </h2>
+      <form id="presentation-form">
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Scrivi il tuo nome"
+          required
+        />
+        <button type="submit">Presentati</button>
+      </form>
+
+      <div id="webcam"></div>
+      <button id="analyze-btn" style="display: none">Analizza emozione!</button>
+
+      <div id="label-container"></div>
+      <div class="emoji" id="emoji" style="display: none"></div>
+      <img src="img/home-img.png" alt="sfondo" id="home-img" />
+      <div id="img-container">
+        <img id="emotion-img" />
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Questo progetto è stato creato per fini educativi con l’aiuto di
+        <a href="https://teachablemachine.withgoogle.com/" target="_blank"
+          >Teachable Machine</a
+        >
+        di Google.<br />
+        I personaggi di <em>Inside Out</em> appartengono a Disney•Pixar – ogni
+        riferimento è usato a scopo non commerciale e didattico.<br />
+        © 2025 Monica Molini per Develhope srl – Tutti i diritti riservati.
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
